@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --https --ssl-cert cert.pem --ssl-key key.pem",
     "lint": "next lint"
   },
   "dependencies": {

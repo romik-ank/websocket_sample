@@ -9,8 +9,8 @@ export default function Home() {
   const socketRef = useRef<WebSocket | null>(null);
 
   useEffect(() => {
-    // Connect to WebSocket server
-    socketRef.current = new WebSocket("ws://localhost:8000/ws");
+    // Connect to WebSocket server using wss (secure WebSocket)
+    socketRef.current = new WebSocket("wss://localhost:8000/ws");
 
     socketRef.current.onopen = () => {
       console.log("WebSocket connected");

@@ -88,6 +88,24 @@ WebSocketDemoSetup/
 
 4. Access the frontend at [http://localhost:3000](http://localhost:3000).
 
+## SSL Setup
+
+To enable SSL, place your `cert.pem` and `key.pem` files in the `certs` directory at the root of the project. These will be mounted into the backend container for secure communication.
+
+Example directory structure:
+
+```
+WebSocketDemoSetup/
+├── certs/
+│   ├── cert.pem
+│   ├── key.pem
+├── backend/
+├── frontend/
+└── docker-compose.yml
+```
+
+Ensure the WebSocket connection in the frontend uses `wss://` instead of `ws://`.
+
 ## How It Works
 
 1. The backend provides a WebSocket endpoint (`/ws`) for real-time communication.
